@@ -11,6 +11,7 @@ namespace Api
         {
             var price = 0;
 
+            //switch expression using constant pattern, no fall through
             price += eventEntity.MarketingCostType switch
             {
                 CostType.Cheap => 8,
@@ -29,6 +30,7 @@ namespace Api
 
             switch (eventEntity)
             {
+                //type pattern
                 case MultiDayConferenceEntity e:
                     price += e.BadgeCosts + e.CateringCosts;
                     price += e.AccomodationCostType switch

@@ -6,10 +6,12 @@ builder.Services.AddScoped<HouseRepository>();
 
 var app = builder.Build();
 
+//C# 10 features: lambda natural types + attributes on lambdas
 app.MapGet("/houses", ([FromServices] HouseRepository repo) => repo.GetAll());
 
 app.Run();
 
+//this didn't work before C# 10
 var del = (string s) => int.Parse(s);
 
 PassingOn(del);

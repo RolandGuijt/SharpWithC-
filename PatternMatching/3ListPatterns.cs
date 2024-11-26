@@ -20,7 +20,7 @@ if (ints is [4, 6, .. var rest])
 if (ints is [< 5, > 6, _, ..])
     Console.WriteLine("match");
 
-ReadOnlySpan<char> s = "Pluralsight";
+ReadOnlySpan<char> s = "Conference";
 
-if (s is ['P' or 'p', .. { Length: 9 }, 't'])
+if (s is ['C' or 'c', .. { Length: 8 }, 'e'])
     Console.WriteLine("match");

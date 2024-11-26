@@ -1,7 +1,8 @@
 ﻿//can't change name after construction, but it isn't required
 //can use ctor but that will lose default ctor
 //required solves this
-var p = new Person { Name = "Roland" };
+var p = new Person();
+
 
 public class Person
 {

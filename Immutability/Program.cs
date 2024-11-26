@@ -23,6 +23,7 @@ namespace ExperimentsWithRecords
             EventPriceDtoToo dto2 = new(1, now, "Test", EventType.Concert, "Music hall", 80, 100);
             var e = dto == dto2;
 
+            //It's a kind of magic
             DtoBase dto3 = dto with { Name = "Concert" };
             var isEventPrice = dto3 is EventPriceDto;
 
